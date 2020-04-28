@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    text-align: center;
+    font-family: 'Lakki Reddy', cursive;
+}
+
+h1 {
+    font-family: 'Lakki Reddy', cursive;
+    font-size: 13rem;
+    margin: 30px 0;
+    letter-spacing: 8px;
+    color: #b82621;
+    font-weight: bold;
+    text-shadow: 0px 0px 0 rgb(231,231,231),1px 1px 0 rgb(216,216,216),2px 2px 0 rgb(202,202,202),3px 3px 0 rgb(187,187,187),4px 4px 0 rgb(173,173,173),5px 5px 0 rgb(158,158,158), 6px 6px 0 rgb(144,144,144),7px 7px 6px rgba(0,0,0,0.6),7px 7px 1px rgba(0,0,0,0.5),0px 0px 6px ;
+    text-transform: capitalize;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    font-size: 5rem;
+}
+
+ul li:first-child {
+    margin-bottom: 30px;
+}
+
+ul li a {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 6rem;
+    letter-spacing: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-shadow:
+    1px 1px 0px #c4dbe2,
+    2px 2px 0px #b4d1d9,
+    3px 3px 0px #a6c6cf,
+    4px 4px 0px #94b8c3,
+    5px 5px 0px #87aeb9,
+    6px 6px 0px #7aa3af,
+    7px 7px 0px #6d97a3,
+    8px 8px 0px #618b98,
+    9px 9px 0px #56818e,
+    10px 10px 0px #4c7683,
+    15px 15px 25px rgba(0,0,0,.9);
+    transition: .5s ease-in-out;
+    position:relative;
+  left:0;
+}
+
+ul li a:hover {
+    color: #eb2626;
+    text-shadow:
+    -1px 1px 0px #e2c4c4,
+    -2px 2px 0px #d9b4b4,
+    -3px 3px 0px #cfa6a6,
+    -4px 4px 0px #c39494,
+    -5px 5px 0px #b98787,
+    -6px 6px 0px #af7a7a,
+    -7px 7px 0px #a36d6d,
+    -8px 8px 0px #986161,
+    -9px 9px 0px #8e5656,
+    -10px 10px 0px #834c4c,
+    -15px 15px 25px rgba(0,0,0,.9);
+    left: 20px;
+}

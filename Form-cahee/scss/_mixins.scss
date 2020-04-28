@@ -1,0 +1,26 @@
+@mixin font($ff: inherit, $fz: inherit, $fc: inherit, $fw: 300, $lh: 1.6) {
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fz;
+    color: $fc;
+    line-height: $lh;
+}
+
+@mixin flex($jc: center) {
+    display: flex;
+    justify-content: $jc;
+    @content;
+}
+
+@mixin tr {
+    transition: all .3s ease-in;
+}
+
+@mixin hover() {
+    @include tr;
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}

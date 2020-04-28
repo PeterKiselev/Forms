@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in Form</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+   <div class="form-wrap" style="background-image: url(img/background.jpg);">
+        <div class="form-block">
+            <input type="radio" name="tab" id="tab-1" checked>
+            <input type="radio" name="tab" id="tab-2">
+            <nav class="tabs">
+                <label class="tab tab--1" for="tab-1">Sign in</label>
+                <label class="tab tab--2" for="tab-2">Join us</label>
+            </nav>
+            <div class="tabs-body">
+                <form class="form form--sign" action="#" method="POST" name="sign">
+                    <label class="form__label">
+                        Username
+                        <input class="form__field" type="text" name="name" pattern="[A-Za-z]{3,}" required>
+                        <span class="form__help">Enter your login more than 3 letters only latin</span>
+                    </label>
+                    <label class="form__label">
+                        Password
+                        <input class="form__field" type="password" name="password" minlength="8" pattern="[0-9]{8,}" required>
+                        <span class="form__help">Enter your password more than 8 numeric</span>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__field" type="checkbox" name="notifications" required>
+                        <span class="form__checkbox-text">Keep me signed in</span>
+                    </label>
+                    <button class="form__btn btn" type="submit">Sign in</button>
+                    <div class="form__links">
+                        <a class="form__link" href="#" target="_blank">Forgot password</a>
+                        <label class="tab tab--2 form__link" for="tab-2">Create an account</label>
+                    </div>
+                </form>
+                <form class="form form--join" action="#" method="POST" name="join">
+                    <label class="form__label">
+                        Username
+                        <input class="form__field" type="text" name="name" pattern="[A-Za-z]{3,}" required>
+                        <span class="form__help">Enter your login more than 3 letters only latin</span>
+                    </label>
+                    <label class="form__label">
+                        Password
+                        <input class="form__field" type="password" name="password" minlength="8" pattern="[0-9]{8,}" required>
+                        <span class="form__help">Enter your password more than 8 numeric</span>
+                    </label>
+                    <label class="form__label">
+                        Repeat Password
+                        <input class="form__field" type="password" name="password" minlength="8" pattern="[0-9]{8,}" required>
+                        <span class="form__help">Enter your password more than 8 numeric</span>
+                    </label>
+                    <button class="form__btn btn" type="submit">Join in</button>
+                </form>
+            </div>
+        </div>
+   </div>
+</body>
+</html>

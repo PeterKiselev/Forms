@@ -1,0 +1,168 @@
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    @include font($body-ff, 1.6rem, $body-color);
+    background-color: $bg-body;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+h2 {
+    @include font($fz: 9rem, $fw: null, $lh: 1);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.section {
+    padding: 7% 0;
+    &--bg {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__head  {
+        text-align: center;
+        max-width: 370px;
+        margin: 0 auto 40px;
+    }
+    &__title {
+        margin: 0 0 40px;
+    }
+    &__subtitle {
+        font-size: 1.7rem;
+    }
+} 
+
+.row {
+    @include flex(space-between);
+}
+
+.col {
+    width: 100%;
+}
+
+.col--1-2 {
+    flex-basis: 48%;
+    max-width: 570px;
+}
+
+.form {
+    max-width: 500px;
+
+    &__field {
+        display: inline-block;
+        width: 100%;
+        border: none;
+        background-color: rgba($input-bg, .5);
+        resize: none;
+        @include font($fz: 1.5rem, $fc: $secondary-color, $lh: inherit);
+        padding: 15px;
+        @include tr;
+        position: relative;
+
+        & + & {
+            margin-top: 15px;
+        }
+        &::placeholder {
+            color: $secondary-color;
+            @include tr;
+        }
+        &:focus {
+            outline: none;
+            background-color: $input-bg;
+            font-weight: 700;
+            border-left: $border-width solid $primary-color;
+            padding-left: 15px;
+        }
+        &:focus::placeholder {
+            opacity: 0;
+        }
+        &:-webkit-autofill {
+            box-shadow: inset 0 0 0 64px $input-bg;
+            -webkit-text-fill-color: $body-color;
+            font-weight: 700;
+        }
+        &:-webkit-autofill:focus {
+            box-shadow: inset 0 0 0 64px $input-bg;
+            -webkit-text-fill-color: $secondary-color;
+        }
+        &[name="message"] {
+            height: 250px;
+        }
+    }
+}
+
+.address {
+    padding: 0 12.5%;
+    font-style: normal;
+    &__title {
+        @include font($fz: 1.7rem, $fw: 700);
+        text-transform: uppercase;
+        & + & {
+            margin-top: 20px;
+        }
+    }
+    &__link {
+        display: block;
+        text-decoration: none;
+        @include font($fz: 1.2em, $fc: inherit, $fw: 300);
+        text-transform: none;
+        @include tr;
+        @include hover {
+            color: $input-bg;
+            text-shadow: 1px 0 0 $input-bg;
+        }
+    }
+}
+
+.footer {
+    padding: 30px 0;
+    background-color: $body-color;
+    color: $footer-color;
+
+    & .container {
+        @include flex(space-between) {
+            align-items: center;
+        };
+    }
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+        @include tr;
+        @include hover {
+            color: $marked;
+            text-shadow: 1px 0 0 $marked;
+        }
+    }
+}
+
+.logo {
+    display: inline-block;
+    text-decoration: none;
+    @include font($ff: $logo-ff, $fc: inherit, $fz: 2.5rem);
+    text-transform: capitalize;
+    @include tr;
+    @include hover {
+        color: $primary-color;
+    }
+}
+
+.marked {
+    font-weight: 700;
+    color: $marked;
+}
